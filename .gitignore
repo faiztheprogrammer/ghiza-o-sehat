@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env.local
+
+# Environment variables & secrets
+.env
+*.env
+*.pem
+*.key
+credentials.json
+
+# Pytest & coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Scratch and log outputs
+*.log
+scratch/
+
+# Miscelaneous
+GhizaOSehat_Master_Handoff.md
