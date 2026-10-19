@@ -1,0 +1,18 @@
+{
+  "chapati": {
+    "canonical_name": "chapati",
+    "display_name_en": "Chapati (wheat bread)",
+    "display_name_ur": "چپاتی",
+    "aliases": ["roti"],
+    "kcal_per_100g": 259,
+    "source_name": "Food Composition Table for Pakistan (FAO-hosted PDF)",
+    "source_reference": "https://www.fao.org/fileadmin/templates/food_composition/documents/regional/Book_Food_Composition_Table_for_Pakistan_.pdf#page=15 ; printed page 8, Composition of Food, A) Cereal and cereal products, row 19: Wheat Bread / Chapati, Food Energy 259 K.cal per 100 g edible portion. Visually verified 2026-10-18.",
+    "notes": [
+      "Published nutrition value: 259 kcal per 100 g edible chapati.",
+      "The separate Traditional Foods chapati record on printed page 48 (PDF page 54) lists 282 kcal per 100 g. It is not averaged or combined with the selected cereal-table record.",
+      "The cooked edible weight in grams is supplied by the user. No standard piece weight, predefined serving size or image-derived weight is assumed.",
+      "This result is an estimate based on the supplied weight and published nutrition value. Actual calories may differ due to recipe and measurement variation.",
+      "Use for plain wheat chapati only. Added oil, ghee, butter, fillings, accompaniments and other preparations are not covered. No automatic adjustments are made."
+    ]
+  }
+}

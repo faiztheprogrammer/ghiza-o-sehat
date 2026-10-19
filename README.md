@@ -10,8 +10,9 @@ Ghiza-o-Sehat is an FYP project designed to assist users in tracking traditional
 
 The project follows the canonical roadmap documented in [`GhizaOSehat_Master_Handoff.md`](./GhizaOSehat_Master_Handoff.md):
 - **Model V1 Frozen for MVP**: EfficientNet-B0 trained on 17 Pakistani food classes.
-- **Human-in-the-Loop**: Image prediction -> user confirms/corrects dish -> user specifies portion -> deterministic nutrition calculation.
+- **Human-in-the-Loop**: Image prediction -> user confirms/corrects dish -> user supplies weight in grams -> deterministic nutrition calculation.
 - **Day 1 Milestone**: Local FastAPI inference backend (`/health`, `/classes`, `/predict`).
+- **Nutrition milestone (2026-10-18)**: `POST /estimate-calories` accepts `confirmed_food`, `food_confirmed: true`, and positive numeric `portion_grams`. Only chapati is supported: 259 kcal/100 g, so 50 g returns one estimate of 129.5 kcal. No predefined serving sizes or calorie ranges. See the backend README for the preserved source, limitations and usage.
 
 ---
 
@@ -34,5 +35,7 @@ Interactive API documentation will be available at [http://127.0.0.1:8000/docs](
 ### Run Test Suite:
 
 ```powershell
-pytest -v tests/test_api.py
+pytest -v
 ```
+
+Verification (2026-10-18): **39 passed, 2 existing deprecation warnings in 9.07 seconds** (9 inference tests and 30 nutrition cases). Full suite command from `backend`: `.\.venv\Scripts\python.exe -B -m pytest -p no:cacheprovider -v`.

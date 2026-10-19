@@ -15,6 +15,8 @@ from fastapi.responses import JSONResponse
 
 from app.core.config import settings
 from app.ml.model_loader import food_model
+from app.schemas.nutrition import CalorieEstimate, EstimateCaloriesRequest, NutritionUnavailable
+from app.services.nutrition_service import estimate_calories
 from app.schemas.prediction import (
     ClassesResponse,
     HealthResponse,
@@ -131,6 +133,18 @@ async def predict_meal(
     result = predict_food_image(image)
 
     return result
+
+
+@app.post(
+    "/estimate-calories",
+    response_model=CalorieEstimate | NutritionUnavailable,
+    summary="Estimate calories for a confirmed food and user-supplied weight in grams",
+    tags=["Nutrition"],
+)
+async def estimate_meal_calories(
+    request: EstimateCaloriesRequest,
+) -> CalorieEstimate | NutritionUnavailable:
+    return estimate_calories(request)
 
 
 @app.get("/", summary="Root API Info", tags=["System"])
