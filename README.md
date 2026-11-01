@@ -39,3 +39,14 @@ pytest -v
 ```
 
 Verification (2026-10-18): **39 passed, 2 existing deprecation warnings in 9.07 seconds** (9 inference tests and 30 nutrition cases). Full suite command from `backend`: `.\.venv\Scripts\python.exe -B -m pytest -p no:cacheprovider -v`.
+
+## 3. Flutter interface
+
+The Android Flutter project is in [`frontend/`](frontend/README.md). It provides
+photo selection, prediction/top-three display, explicit food confirmation,
+user-entered grams, and the backend calorie estimate or unavailable message.
+The backend and Model V1 are unchanged.
+
+See the frontend README for backend startup, emulator/phone networking, Flutter
+commands, prerequisites and smoke tests. No Android device/emulator was available
+during implementation; Android licenses also require user acceptance.
